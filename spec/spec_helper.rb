@@ -7,6 +7,13 @@ ENV['COVERAGE'] ||= 'yes' if Dir.exist?(File.expand_path('../../lib', __FILE__))
 
 require 'voxpupuli/test/spec_helper'
 
+RSpec.configure do |config|
+  # puppetlabs_spec_helper defaults to mocha but emits a deprecation warning
+  # Vox Pupuli prefers rspec to avoid the deprecation warning unless explicitly
+  # set
+  config.facter_implementation = :rspec
+end
+
 if File.exist?(File.join(__dir__, 'default_module_facts.yml'))
   facts = YAML.safe_load(File.read(File.join(__dir__, 'default_module_facts.yml')))
   if facts
