@@ -26,7 +26,8 @@ group :release do
 end
 
 gem 'rake', :require => false
-gem 'facter', ENV['FACTER_GEM_VERSION'], :require => false, :groups => [:test]
+# gem 'facter', ENV['FACTER_GEM_VERSION'], :require => false, :groups => [:test]
+gem 'facter', git: 'https://github.com/puppetlabs/facter', branch: '2.x', :require => false, :groups => [:test]
 
 puppetversion = ENV['PUPPET_VERSION'] || '>= 6.0'
 gem 'puppet', puppetversion, :require => false, :groups => [:test]
