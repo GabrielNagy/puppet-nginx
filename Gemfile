@@ -30,6 +30,6 @@ gem 'facter', ENV['FACTER_GEM_VERSION'], :require => false, :groups => [:test]
 
 puppetversion = ENV['PUPPET_VERSION'] || '>= 6.0'
 gem 'puppet', puppetversion, :require => false, :groups => [:test]
-gem 'rspec-puppet', git: 'https://github.com/GabrielNagy/rspec-puppet.git', branch: 'facter-impl', require: false
+# gem 'rspec-puppet', git: 'https://github.com/GabrielNagy/rspec-puppet.git', branch: 'facter-impl', require: false
 
 # vim: syntax=ruby
