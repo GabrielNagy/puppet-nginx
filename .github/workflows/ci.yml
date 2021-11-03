@@ -18,8 +18,8 @@ jobs:
       fail-fast: false
     env:
       BUNDLE_WITHOUT: development:system_tests:release
-      PUPPET_VERSION: "~> 6.0"
-    name: Puppet 6 (Ruby 2.6)
+      PUPPET_VERSION: "~> 6.10.0"
+    name: Puppet 6.10 (Ruby 2.6)
     steps:
       - uses: actions/checkout@v2
       - name: Setup ruby
