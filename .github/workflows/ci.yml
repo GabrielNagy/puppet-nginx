@@ -19,13 +19,13 @@ jobs:
     env:
       BUNDLE_WITHOUT: development:system_tests:release
       PUPPET_VERSION: "~> 5.0"
-    name: Puppet 5 (Ruby 2.4)
+    name: Puppet 5 (Ruby 2.6)
     steps:
       - uses: actions/checkout@v2
       - name: Setup ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.4
+          ruby-version: 2.6
           bundler-cache: true
       - name: Run tests
         run: bundle exec rake parallel_spec
